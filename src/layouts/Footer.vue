@@ -3,7 +3,7 @@
     <div
       data-message="If you are deploying to your own public website, please do not modify it unless you have permission from the original author."
     >
-      Made by
+      <span>Anerkennung an</span>
       <a
         class="link"
         href="https://leoku.top"
@@ -14,11 +14,6 @@
       </a>
     </div>
 
-    <div class="divider">|</div>
-
-    <div class="locale" @click="switchLocale">
-      {{ locale === Locale.EN ? '简体中文' : 'English' }}
-    </div>
   </footer>
 </template>
 
@@ -64,4 +59,13 @@ function switchLocale() {
     }
   }
 }
+
+span {
+  opacity: 0.6;
+}
+
+a {
+  color: #2f6ddf;
+}
+
 </style>

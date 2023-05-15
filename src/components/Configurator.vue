@@ -1,25 +1,6 @@
 <template>
   <PerfectScrollbar class="configurator-scroll">
     <div class="configurator">
-      <SectionWrapper :title="t('label.wrapperShape')">
-        <ul class="wrapper-shape">
-          <li
-            v-for="wrapperShape in SETTINGS.wrapperShape"
-            :key="wrapperShape"
-            class="wrapper-shape__item"
-            :title="t(`wrapperShape.${wrapperShape}`)"
-            @click="switchWrapperShape(wrapperShape)"
-          >
-            <div
-              class="shape"
-              :class="[
-                wrapperShape,
-                { active: wrapperShape === avatarOption.wrapperShape },
-              ]"
-            />
-          </li>
-        </ul>
-      </SectionWrapper>
 
       <SectionWrapper :title="t('label.backgroundColor')">
         <ul class="color-list">

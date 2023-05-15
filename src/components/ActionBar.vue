@@ -52,12 +52,7 @@ const actions = computed(() => [
     type: ActionType.Flip,
     icon: IconFlip,
     tip: t('action.flip'),
-  },
-  {
-    type: ActionType.Code,
-    icon: IconCode,
-    tip: t('action.code'),
-  },
+  }
 ])
 </script>
 

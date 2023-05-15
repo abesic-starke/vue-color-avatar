@@ -3,11 +3,11 @@
     <Container>
       <div class="content-warpper">
         <div class="content-view">
-          <Header />
 
           <div class="playground">
             <div class="avatar-wrapper">
               <VueColorAvatar
+                class="VueColorAvatar"
                 ref="colorAvatarRef"
                 :option="avatarOption"
                 :size="280"
@@ -41,13 +41,6 @@
                 }}
               </button>
 
-              <button
-                type="button"
-                class="action-btn action-multiple"
-                @click="() => generateMultiple()"
-              >
-                {{ t('action.downloadMultiple') }}
-              </button>
             </div>
           </div>
 
@@ -269,15 +262,23 @@ async function generateMultiple(count = 5 * 6) {
 }
 </script>
 
+<style>
+span, p, h1, h2, h3, h4, h5, h6 {
+  color: black !important;
+}
+
+</style>
+
 <style lang="scss" scoped>
 @use 'src/styles/var';
+
 
 .main {
   width: 100%;
   height: 100%;
   overflow: hidden;
   color: var.$color-text;
-  background-color: var.$color-page-bg;
+  background-color: white;
 
   .content-warpper {
     height: 100%;
@@ -370,10 +371,10 @@ async function generateMultiple(count = 5 * 6) {
       width: 100vh;
       height: 100vh;
       background-image: radial-gradient(
-        rgba($color, 0.8) 20%,
-        rgba($color, 0.6) 40%,
-        rgba($color, 0.4) 60%,
-        rgba($color, 0.2) 80%,
+        #4f8cff 20%,
+        #4f8cff 40%,
+        #4f8cff 60%,
+        #4f8cff 80%,
         transparent 100%
       );
       border-radius: 50%;
@@ -396,4 +397,9 @@ async function generateMultiple(count = 5 * 6) {
     }
   }
 }
+
+.VueColorAvatar {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 </style>
